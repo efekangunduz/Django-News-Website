@@ -10,13 +10,14 @@
         <div class="header_top">
           <div class="header_top_left">
             <ul class="top_nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="{% static 'pages/contact.html'%}">Contact</a></li>
+              <li><a href="/home">Anasayfa</a></li>
+              <li><a href="/aboutus">Hakkımızda</a></li>
+              <li><a href="/contactus">İletişim</a></li>
+              <li><a href="/references">Referanslar</a></li>
             </ul>
           </div>
           <div class="header_top_right">
-            <p>Friday, December 05, 2045</p>
+            <p>{% now "SHORT_DATETIME_FORMAT" %}</p> <!-- Another Format {% now "jS F Y H:i" %}-->
           </div>
         </div>
       </div>

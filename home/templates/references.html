@@ -1,0 +1,26 @@
+{% extends "homebase.html" %}
+
+{% block title %} Referanslar-{{ setting.company}} {% endblock %}
+{% block keywords %} {{ setting.keywords}}{% endblock %}
+{% block description %} {{ setting.description }}{% endblock %}
+
+{% block head %}
+<link rel="shortcut icon" type="image/x-icon" href="{{ setting.icon.url }}" />
+{% endblock %}
+
+
+{% block body %}
+<section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="contact_area">
+            <h2>REFERANSLAR</h2>
+            <p> {{ setting.references | safe }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}

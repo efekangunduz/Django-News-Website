@@ -1,0 +1,44 @@
+{% extends "homebase.html" %}
+
+{% block title %} İletişim-{{ setting.company}} {% endblock %}
+{% block keywords %} {{ setting.keywords}}{% endblock %}
+{% block description %} {{ setting.description }}{% endblock %}
+
+{% block head %}
+<link rel="shortcut icon" type="image/x-icon" href="{{ setting.icon.url }}" />
+{% endblock %}
+
+
+{% block body %}
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="single_sidebar">
+            <h2><span>İLETİŞİM BİLGİLERİ</span></h2>
+            <p>{{ setting.contactus | safe }}</p>
+          </div>
+        </div>
+      </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+        <aside class="right_content">
+          <div class="single_sidebar">
+            <h2><span>İLETİŞİM FORMU</span></h2>
+            <ul class="spost_nav">
+              <li>
+                  <form action="#" class="contact_form">
+                    <input class="form-control" type="text" placeholder="İsim">
+                    <input class="form-control" type="email" placeholder="Email">
+                    <textarea class="form-control" cols="30" rows="10" placeholder="Mesaj"></textarea>
+                    <input type="submit" value="Mesaj Gönder">
+                  </form>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
+{% endblock %}
