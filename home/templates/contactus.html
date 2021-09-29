@@ -24,12 +24,18 @@
         <aside class="right_content">
           <div class="single_sidebar">
             <h2><span>İLETİŞİM FORMU</span></h2>
+                  {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                  {% endif %}
             <ul class="spost_nav">
               <li>
-                  <form action="#" class="contact_form">
-                    <input class="form-control" type="text" placeholder="İsim">
-                    <input class="form-control" type="email" placeholder="Email">
-                    <textarea class="form-control" cols="30" rows="10" placeholder="Mesaj"></textarea>
+                  <form action="" method="post">
+                      {% csrf_token %}
+                      {{ form.as_p }}
                     <input type="submit" value="Mesaj Gönder">
                   </form>
               </li>
